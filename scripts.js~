@@ -1,0 +1,53 @@
+var mouseDown = false;
+
+function generateGrid(numberX) {
+  size = $('#sketchbox').width() / numberX + 1;
+  var numberY = Math.ceil($('#sketchbox').height() / (size - 1));
+  console.log(size);
+  console.log(numberY);
+  
+  var divsToInsert = [];
+  
+  for(var i = 0; i < numberY * numberX; i++) {    
+    divsToInsert[i] = "<div class='pixel' style='width:" + size + "px; height:" + size+"px;'></div>";
+  }
+  
+  $('#sketchbox').append(divsToInsert.join(''));    
+  
+  $('.pixel').css({
+    'box-sizing': 'border-box',
+    'border': '1px solid rgba(0, 0, 0, 0.1)',
+    'margin': '0',
+    'float': 'left',
+    'margin-right': '-1px',
+    'margin-bottom': '-1px',
+    'padding': 0,
+    'vertical-align': 'top',
+    'cursor': 'cell'    
+  });
+  
+};
+
+
+generateGrid(40);
+
+/*$('.pixel').hover(function() {
+  $(this).addClass('black');
+});*/
+
+$('.pixel').mousedown(function() {
+  event.preventDefault();
+  mouseDown = true;
+  $(this).addClass('black');
+}).mouseenter(function() {
+  if(mouseDown) {
+    $(this).addClass('black');
+  }
+}).mouseup(function() {
+  mouseDown = false;
+});
+
+
+$('#sketchbox').mouseleave(function() {
+  $('.pixel').mouseup();
+});

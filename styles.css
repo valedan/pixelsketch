@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+
+
+}
+
+body {
+  background-image: url('witewall_3.png');
+}
+  
+#sketchbox {
+  width: 800px;
+  height: 800px;
+  background-color: white;
+  margin: auto;
+  padding: 0;
+  margin-top: 50px;
+  overflow: hidden;
+  border: 5px solid #F5DD9D;
+ /* border-image: url('purty_wood.png') repeat;*/
+}
+
+.black {
+  background-color: black;
+}
