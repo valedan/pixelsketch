@@ -48,13 +48,17 @@ generateGrid(100);
   $(this).addClass('black');
 });*/
 
+function colorCell(div) {
+  $(div).addClass('black');
+}
+
 $('.pixel').mousedown(function() {
   event.preventDefault();
   mouseDown = true;
-  $(this).addClass('black');
+  colorCell(this);
 }).mouseenter(function() {
   if(mouseDown) {
-    $(this).addClass('black');
+    colorCell(this);
   }
 }).mouseup(function() {
   mouseDown = false;
