@@ -3,10 +3,26 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" href="witewall_3.png"/>
+
   </head>
   <body>
+
+    <form>
+      <fieldset>
+        <legend>Select drawing mode: </legend>
+        <input type="radio" name="drawMode" value="hover" class="drawMode"
+              id="hover">Hover<br>
+        <input type="radio" name="drawMode" value="click" class="drawMode"
+              id="click" checked>Click<br>
+      </fieldset>
+    </form>
+
     <div id="sketchbox"></div>
+
+
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
+
   </body>
 </html>

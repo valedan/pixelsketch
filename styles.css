@@ -8,14 +8,14 @@
 body {
   background-image: url('witewall_3.png');
 }
-  
+
 #sketchbox {
   width: 800px;
   height: 800px;
   background-color: white;
   margin: auto;
   padding: 0;
-  margin-top: 50px;
+  margin-top: 30px;
   overflow: hidden;
   border: 5px solid #F5DD9D;
  /* border-image: url('purty_wood.png') repeat;*/
@@ -23,4 +23,10 @@ body {
 
 .black {
   background-color: black;
+}
+
+form {
+  float: left;
+  margin-top: 20px;
+  margin-left: 60px;
 }
